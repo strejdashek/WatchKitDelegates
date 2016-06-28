@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="10032"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchKitDelegates_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <button width="1" alignment="left" title="Test" id="aeo-EN-fce">
+                            <connections>
+                                <segue destination="bu3-Ln-nZE" kind="push" identifier="Detail" id="wzx-L6-k0W"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="testBtn" destination="aeo-EN-fce" id="yBM-Ne-fzV"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+        <!--Detail Interface Controller-->
+        <scene sceneID="D68-xC-Qtn">
+            <objects>
+                <controller id="bu3-Ln-nZE" customClass="DetailInterfaceController" customModule="WatchKitDelegates_WatchKit_Extension">
+                    <items>
+                        <button width="1" alignment="left" title="Callback" id="Rlp-vb-3qv">
+                            <connections>
+                                <action selector="detailBtnTap" destination="bu3-Ln-nZE" id="7eH-7X-gb6"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="detailBtn" destination="Rlp-vb-3qv" id="fbB-4h-Kjv"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="590" y="429"/>
+        </scene>
+    </scenes>
+</document>
